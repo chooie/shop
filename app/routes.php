@@ -15,7 +15,14 @@ Route::get('/', [
     'as'   => 'home',
     'uses' => 'PagesController@home'
 ]);
-
+Route::get('about', [
+    'as'    => 'about',  
+    'uses'  => 'PagesController@about'
+]);
+Route::get('placead', [
+    'as'    => 'placead',
+    'uses'  => 'PagesController@placead' 
+]);
 /**
  * Registration!
  */
@@ -46,3 +53,5 @@ Route::get('logout', [
     'as'   => 'logout_path',
     'uses' => 'SessionsController@destroy'
 ]);
+
+Route::get('/','PagesController@home');

@@ -29,11 +29,6 @@
             </div>
 
 			<div class="form-group">
-			    {{ Form::label('remember_me', 'Remember me') }}
-			    {{ Form::checkbox('remember_me', 1, false) }}
-			</div>
-
-			<div class="form-group">
 				{{ Form::submit('Sign Up', ['class' => 'btn btn-primary']) }}
 			</div>
 		{{ Form::close() }}

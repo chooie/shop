@@ -3,7 +3,6 @@
 use Shop\Forms\SignInForm;
 
 class SessionsController extends \BaseController {
-
     /**
      * @var SignInForm
      */
@@ -40,24 +39,17 @@ class SessionsController extends \BaseController {
 		// validate the form
 		$this->signInForm->validate($input);
 
-        // determines whether the user shall remain logged in
-        $rememberMe = Input::only('remember_me');
-        if ($rememberMe == null)
+        // if invalid, then go back
+        // if is valid, then try to sign in
+        if ( ! Auth::attempt($input))
         {
-            $rememberMe = false;
-        }
-        dd($rememberMe);
-		// if invalid, then go back
-		// if is valid, then try to sign in
-		if ( ! Auth::attempt($input, $rememberMe))
-		{
-			Flash::message('We were unable to sign you in. Please check your credentials and try again!');
+            Flash::message('We were unable to sign you in. Please check your credentials and try again!');
 
-			return Redirect::back()->withInput();
-		}
-		Flash::message('Welcome back!');
-		// redirect home
-		return Redirect::intended('/');
+            return Redirect::back()->withInput();
+        }
+        Flash::message('Welcome back!');
+        // redirect home
+        return Redirect::intended('/');
 	}
 
 	/**

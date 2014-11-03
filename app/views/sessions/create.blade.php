@@ -16,11 +16,6 @@
 					{{ Form::password('password', ['class' => 'form-control', 'required' => 'required']) }}
 				</div>
 
-                <div class="form-group">
-                    {{ Form::label('remember_me', 'Remember me') }}
-                    {{ Form::checkbox('remember_me', 1, false) }}
-                </div>
-
 				<div class="form-group">
 					{{ Form::submit('Sign In', ['class' => 'btn btn-primary']) }}
 					{{-- link_to('/password/remind', 'Reset Your Password', ['class' => 'password_reset']) --}}

@@ -42,7 +42,11 @@ class RegistrationController extends \BaseController {
         $user = $this->execute(RegisterUserCommand::class);
 
         // determines whether the user shall remain logged in
-        $rememberMe = Input::only('remember_me');
+        $rememberMe = false;
+        if (Input::has('remember_me'))
+        {
+            $rememberMe = true;
+        }
 
         Auth::login($user, $rememberMe);
 

@@ -11,6 +11,9 @@
 |
 */
 
+/**
+ * Pages
+ */
 Route::get('/', [
     'as'   => 'home',
     'uses' => 'PagesController@home'
@@ -53,5 +56,3 @@ Route::get('logout', [
     'as'   => 'logout_path',
     'uses' => 'SessionsController@destroy'
 ]);
-
-Route::get('/','PagesController@home');

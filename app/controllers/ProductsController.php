@@ -25,7 +25,7 @@ class ProductsController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('products.create');
 	}
 
 	/**
@@ -36,7 +36,7 @@ class ProductsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		// handle the storing of the product for a particular user
 	}
 
 	/**
@@ -48,7 +48,9 @@ class ProductsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$product = Product::whereId($id)->first();
+
+        return View::make('products.show', compact('product'));
 	}
 
 	/**
@@ -84,7 +86,16 @@ class ProductsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
-	}
+		if(Auth::user()->username == Product::whereId($id)->first()->username)
+        {
+            Product::destroy($id);
 
+            Flash::message('Successfully cancelled product listing');
+
+            return Redirect::home();
+        }
+        Flash::warning('Naughty naughty...');
+
+        return Redirect::home();
+	}
 }

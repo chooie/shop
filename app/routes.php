@@ -26,10 +26,14 @@ Route::get('placead', [
     'as'    => 'placead',
     'uses'  => 'PagesController@placead' 
 ]);
-Route::get('products', function() {
-    $products = Shop\Users\User::find(1)->products->first();
-    dd($products);
-});
+//Route::get('products', function() {
+//    $products = Shop\Users\User::find(1)->products->first();
+//    dd($products);
+//});
+Route::get('products', [
+    'as' => 'products',
+    'uses' => 'ProductsController@index'
+]);
 /**
  * Registration!
  */

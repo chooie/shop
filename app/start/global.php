@@ -58,7 +58,7 @@ App::error(function(Laracasts\Validation\FormValidationException $exception, $co
 });
 
 // Custom error pages
-App::error(function($exception, $code)
+/* App::error(function($exception, $code)
 {
     switch ($code)
     {
@@ -75,6 +75,7 @@ App::error(function($exception, $code)
             return Response::view('errors.default', array(), $code);
     }
 });
+*/
 
 /*
 |--------------------------------------------------------------------------

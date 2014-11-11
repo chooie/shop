@@ -9,4 +9,11 @@
 		</p>
 	@endif
 </div>
+@if ($recentProducts->get()->first())
+    @foreach ($recentProducts->get() as $product)
+        @include('products.partials.productInfo')
+    @endforeach
+@else
+<h2>There are no products :(</h2>
+@endif
 @stop

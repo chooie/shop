@@ -33,6 +33,11 @@ Route::get('placead', [
 Route::resource('products', 'ProductsController');
 
 /**
+ * Users (Restful routing)
+ */
+Route::resource('users', 'UsersController');
+
+/**
  * Registration!
  */
 Route::get('register', [

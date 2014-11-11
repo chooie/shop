@@ -26,7 +26,7 @@
 						{{ $currentUser->username }} <span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu" role="menu">
-						<li>{{-- link_to_route('profile_path', 'Your Profile', $currentUser->username) --}}</li>
+						<li>{{ link_to_route('users.show', 'Your Profile', $currentUser->id) }}</li>
 						<li class="divider"></li>
 						<li>{{ link_to_route('logout_path', 'Logout') }}</li>
 					</ul>

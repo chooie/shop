@@ -1,8 +1,25 @@
 <?php
 
 use Shop\Products\Product;
+use Shop\Forms\ProductForm;
 
 class ProductsController extends \BaseController {
+
+    /**
+     * @var ProductForm
+     */
+    private $productForm;
+
+
+    /**
+     * Constructor
+     * @param ProductForm $registrationForm
+     */
+    function __construct(ProductForm $productForm)
+    {
+        $this->productForm = $productForm;
+        $this->beforeFilter('auth', ['except' => ['index', 'show']]);
+    }
 
 	/**
 	 * Display a listing of the resource.
@@ -36,7 +53,18 @@ class ProductsController extends \BaseController {
 	 */
 	public function store()
 	{
-		// handle the storing of the product for a particular user
+        $this->productForm->validate(Input::all());
+
+        $product = new Product();
+
+        $product->name = Input::get('name');
+        $product->price = Input::get('price');
+        $product->user_id = Auth::user()->id;
+
+        $product->save();
+
+        Flash::message("Yay! You've successfully posted a new product!");
+        return Redirect::home();
 	}
 
 	/**
@@ -86,7 +114,7 @@ class ProductsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		if(Auth::user()->username == Product::whereId($id)->first()->username)
+		if(Auth::user()->username == Product::whereId($id)->first()->user()->first()->username)
         {
             Product::destroy($id);
 

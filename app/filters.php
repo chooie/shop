@@ -11,6 +11,8 @@
 |
 */
 
+use Laracasts\Flash\Flash;
+
 App::before(function($request)
 {
 	//
@@ -43,6 +45,7 @@ Route::filter('auth', function()
 		}
 		else
 		{
+            Flash::message('You must be logged in to do that. Please log in.');
 			return Redirect::guest('login');
 		}
 	}

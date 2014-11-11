@@ -7,7 +7,7 @@
 
 		@include('layouts.partials.errors')
 
-		{{ Form::open(['route' => 'products.create']) }}
+		{{ Form::open(['route' => 'products.store']) }}
 			<div class="form-group">
 				{{ Form::label('name', 'Product name:') }}
 				{{ Form::text('name', null, ['class' => 'form-control']) }}
@@ -21,7 +21,7 @@
 			</div>
 
 			<div class="form-group">
-				{{ Form::submit('Sign Up', ['class' => 'btn btn-primary']) }}
+				{{ Form::submit('Post Product', ['class' => 'btn btn-primary']) }}
 			</div>
 		{{ Form::close() }}
 	<div>

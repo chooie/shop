@@ -21,8 +21,4 @@ class PagesController extends \BaseController {
 	{
 		return View::make('pages.about');
 	}
-	public function placead()
-	{
-		return View::make('pages.placead');
-	}
 }

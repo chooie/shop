@@ -10,7 +10,7 @@
             <li>Last Activity: {{ $product->user()->first()->username }}</li>
         </ul>
     </li>
-    @if ($currentUser->username == $product->user()->first()->username)
+    @if ($currentUser && $currentUser->username == $product->user()->first()->username)
         {{ Form::open(['route' => ['products.destroy', $product->id], 'method' => 'delete']) }}
                     <div class="form-group">
                         {{ Form::submit('Cancel Listing', ['class' => 'btn btn-danger']) }}

@@ -1,15 +1,20 @@
 @extends('layouts.default')
 
 @section('content')
-<div class="jumbotron">
-	<h1>Welcome to the Shop!</h1>
+<div class="jumbotron" style="text-align: center">
+	<h1>Welcome!</h1>
+	<p>
+        “Anteek offers you an elegant looking, user friendly platform for selling antique
+        furniture. It’s a treasure trove for collectors, dealers and antique enthusiasts.”
+	</p>
 	@if ( ! $currentUser)
 		<p>
-			{{-- link_to_route('register_path', 'Sign Up', null, ['class' => 'btn btn-lg btn-primary']) --}}
+		    {{ link_to_route('register_path', 'Sign Up', null, ['class' => 'btn btn-lg btn-primary']) }}
 		</p>
 	@endif
 </div>
 @if ($recentProducts->get()->first())
+    <h2>Recent Activity</h2>
     @foreach ($recentProducts->get()->chunk(4) as $productSet)
         <div class="row users">
             @foreach ($productSet as $product)

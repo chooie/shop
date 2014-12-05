@@ -18,6 +18,7 @@
 
 			<ul class="nav navbar-nav navbar-right">
 			@if ($currentUser)
+			    <li>{{ link_to_route('products.create', 'Add Item') }}</li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<img class="nav-gravatar" src="{{ $currentUser->present()->gravatar() }}" 

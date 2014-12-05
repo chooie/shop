@@ -16,6 +16,8 @@
 					{{ Form::password('password', ['class' => 'form-control', 'required' => 'required']) }}
 				</div>
 
+                @include('layouts.partials.recaptcha')
+
 				<div class="form-group">
 					{{ Form::submit('Sign In', ['class' => 'btn btn-primary']) }}
 					{{-- link_to('/password/remind', 'Reset Your Password', ['class' => 'password_reset']) --}}

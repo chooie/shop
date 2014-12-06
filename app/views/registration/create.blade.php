@@ -34,6 +34,6 @@
 				{{ Form::submit('Sign Up', ['class' => 'btn btn-primary']) }}
 			</div>
 		{{ Form::close() }}
-	<div>
+	</div>
 </div>
 @stop

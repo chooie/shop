@@ -41,7 +41,7 @@ class SessionsController extends \BaseController {
 
         // if invalid, then go back
         // if is valid, then try to sign in
-        if ( ! Auth::attempt($input::only('email', 'password')))
+        if ( ! Auth::attempt(Input::only('email', 'password')))
         {
             Flash::message('We were unable to sign you in. Please check your credentials and try again!');
 

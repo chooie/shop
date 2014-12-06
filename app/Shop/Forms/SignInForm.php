@@ -10,6 +10,7 @@ class SignInForm extends FormValidator
 	 */
 	protected $rules = [
 		'email'    => 'required',
-		'password' => 'required'
+		'password' => 'required',
+        'g-recaptcha-response' => 'required|captcha'
 	];
 }

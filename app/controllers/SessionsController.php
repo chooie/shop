@@ -35,7 +35,7 @@ class SessionsController extends \BaseController {
 	public function store()
 	{
 		// fetch the form input
-		$input = Input::only('email', 'password');
+		$input = Input::only('email', 'password', 'g-recaptcha-response');
 		// validate the form
 		$this->signInForm->validate($input);
 

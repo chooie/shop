@@ -28,8 +28,8 @@
       <file leaf-file-name="SessionsController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/SessionsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4680851" vertical-offset="388" max-vertical-offset="1440">
-              <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.62765956" vertical-offset="388" max-vertical-offset="1440">
+              <caret line="43" column="64" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -948,8 +948,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/SessionsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4680851" vertical-offset="388" max-vertical-offset="1440">
-          <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.62765956" vertical-offset="388" max-vertical-offset="1440">
+          <caret line="43" column="64" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
           <folding />
         </state>
       </provider>

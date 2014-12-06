@@ -5,6 +5,7 @@
 	
 	<div class="row">
 		<div class="col-md-6">
+		    @include('layouts.partials.errors')
 			{{ Form::open(['route' => 'login_path']) }}
 				<div class="form-group">
 					{{ Form::label('email', 'Email:') }}

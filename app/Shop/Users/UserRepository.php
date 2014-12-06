@@ -1,4 +1,5 @@
-<?php namespace Shop\Users;
+<?php
+namespace Shop\Users;
 
 class UserRepository {
 

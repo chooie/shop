@@ -1,4 +1,5 @@
-<?php namespace Shop\Products;
+<?php
+namespace Shop\Products;
 
 use Laracasts\Presenter\Presenter;
 

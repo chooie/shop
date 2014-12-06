@@ -1,6 +1,7 @@
 <?php
 
 use Laracasts\Commander\CommanderTrait;
+use Shop\Categories\Category;
 
 class BaseController extends Controller {
 
@@ -20,6 +21,7 @@ class BaseController extends Controller {
 
         View::share('currentUser', Auth::user());
         View::share('signedIn', Auth::user());
+        View::share('categories', Category::all());
     }
 
 }

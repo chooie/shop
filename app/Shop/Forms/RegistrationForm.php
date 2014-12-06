@@ -1,4 +1,5 @@
-<?php namespace Shop\Forms;
+<?php
+namespace Shop\Forms;
 
 use Laracasts\Validation\FormValidator;
 

@@ -1,4 +1,5 @@
-<?php namespace Shop\Products;
+<?php
+namespace Shop\Products;
 
 use Laracasts\Presenter\PresentableTrait;
 
@@ -8,7 +9,7 @@ class Product extends \Eloquent {
 
     protected $fillable = ['name', 'price', 'user_id'];
 
-    protected $presenter = 'Larabook\Statuses\StatusPresenter';
+    protected $presenter = 'Shop\Products\ProductPresenter';
 
 
     public function user()

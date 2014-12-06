@@ -31,7 +31,10 @@ Route::get('placead', [
  * Products (Restful routing)
  */
 Route::resource('products', 'ProductsController');
-
+Route::get('productsByCategory/{category}', [
+    'as' => 'products_by_category_path',
+    'uses' => 'ProductsController@indexByCategory'
+]);
 /**
  * Users (Restful routing)
  */

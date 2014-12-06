@@ -18,7 +18,8 @@ class ProductsController extends \BaseController {
     function __construct(ProductForm $productForm)
     {
         $this->productForm = $productForm;
-        $this->beforeFilter('auth', ['except' => ['index', 'show']]);
+        $this->beforeFilter('auth',
+            ['except' => ['index', 'indexByCategory', 'show']]);
     }
 
 	/**
@@ -33,6 +34,18 @@ class ProductsController extends \BaseController {
 
         return View::make('products.listing', compact('products'));
 	}
+
+    /**
+     * @param $category
+     *
+     * @return Response
+     */
+    public function indexByCategory($category)
+    {
+        $products = Product::whereCategory($category)->simplePaginate(25);
+        dd($products);
+        return View::make('products.listing', compact('products'));
+    }
 
 	/**
 	 * Show the form for creating a new resource.

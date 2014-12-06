@@ -1,4 +1,5 @@
-<?php namespace Shop\Registration;
+<?php
+namespace Shop\Registration;
 
 class RegisterUserCommand 
 {

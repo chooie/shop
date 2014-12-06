@@ -12,7 +12,9 @@ class UsersController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+        $users = User::orderBy('username', 'asc')->simplePaginate(25);
+
+        return View::make('users.index', compact('users'));
 	}
 
 	/**
@@ -44,9 +46,9 @@ class UsersController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($username)
 	{
-		$user = User::whereId($id)->first();
+        $user = User::whereUsername($username)->first();
 
         return View::make('users.show', compact('user'));
 	}

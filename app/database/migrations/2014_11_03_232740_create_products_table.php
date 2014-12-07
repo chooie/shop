@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration {
             $table->string('name');
             $table->decimal('price');
             $table->integer('user_id')->index();
+            $table->integer('category_id');
 			$table->timestamps();
 		});
 	}

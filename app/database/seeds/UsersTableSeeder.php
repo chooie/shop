@@ -14,8 +14,12 @@ class UsersTableSeeder extends Seeder {
             User::create([
                 'username' => $faker->userName. $index,
                 'email' => $faker->email,
-                'password' => 'secret'
-            ]);
+                'password' => 'secret',
+                'house_number' => $faker->buildingNumber,
+                'street' => $faker->streetName . ' ' . $faker->streetSuffix,
+                'town' => $faker->city,
+                'country' => $faker->country,
+                'postcode' => $faker->postcode]);
         }
     }
 }

@@ -3,6 +3,10 @@
 use Shop\Products\Product;
 use Shop\Forms\ProductForm;
 
+
+
+use Shop\Categories\Category;
+
 class ProductsController extends \BaseController {
 
     /**
@@ -42,9 +46,12 @@ class ProductsController extends \BaseController {
      */
     public function indexByCategory($category)
     {
-        $products = Product::whereCategory($category)->paginate(24);
-        dd($products);
-        return View::make('products.listing', compact('products'));
+
+        $categoryId = Category::whereCategory($category)->first()->id;
+
+        $products = Product::whereCategoryId($categoryId)->paginate(24);
+
+        return View::make('products.index', compact('products'));
     }
 
 	/**

@@ -12,7 +12,7 @@ class PagesController extends \BaseController {
 	public function home()
 	{
         // Get the 20 most recent products based on when they were last updated
-        $recentProducts = Product::orderBy('updated_at', 'asc')->take(20);
+        $recentProducts = Product::orderBy('created_at', 'desc')->take(20);
         return View::make('pages.home', compact('recentProducts'));
 	}
 

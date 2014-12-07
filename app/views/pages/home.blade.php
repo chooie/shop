@@ -33,7 +33,7 @@
     </a>
 </div>
 @if ($recentProducts->get()->first())
-    <h2>Recent Activity</h2>
+    <h2>Recent Listings</h2>
     @foreach ($recentProducts->get()->chunk(4) as $productSet)
         <div class="row">
             @foreach ($productSet as $product)

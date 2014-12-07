@@ -1,32 +1,44 @@
 @extends('layouts.default')
 
 @section('content')
-<div class="jumbotron" style="text-align: center">
-	<h1>Welcome!</h1>
-	<p>
-        “Anteek offers you an elegant looking, user friendly platform for selling antique
-        furniture. It’s a treasure trove for collectors, dealers and antique enthusiasts.”
-	</p>
-	@if ( ! $currentUser)
-		<p>
-		    {{ link_to_route('register_path', 'Sign Up', null, ['class' => 'btn btn-lg btn-primary']) }}
-		</p>
-	@endif
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img class="slide-image" src="http://placehold.it/1200x315" alt="">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>“Anteek offers you an elegant looking, user friendly platform for selling antique
+                    furniture. It’s a treasure trove for collectors, dealers and antique enthusiasts.”</h1>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img class="slide-image" src="http://placehold.it/1200x315" alt="">
+        </div>
+        <div class="item">
+            <img class="slide-image" src="http://placehold.it/1200x315" alt="">
+        </div>
+    </div>
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
 </div>
 @if ($recentProducts->get()->first())
     <h2>Recent Activity</h2>
     @foreach ($recentProducts->get()->chunk(4) as $productSet)
-        <div class="row users">
+        <div class="row">
             @foreach ($productSet as $product)
-                <div class="col-md-3 user-block">
-
-                    <h4 class="user-block-username">
-                        {{ link_to_route('products.show', $product->name, $product->id) }}
-                    </h4>
-                    <p>Price: {{ $product->price }}</p>
-                    <p>First Posted: {{ $product->created_at }}</p>
-                    <p>Recent Activity: {{ $product->updated_at }}</p>
-                    <p>Sold by: {{ $product->user()->first()->username }}</p>
+                <div class="col-md-3">
+                    @include('products.partials.productInfo')
                 </div>
             @endforeach
         </div>

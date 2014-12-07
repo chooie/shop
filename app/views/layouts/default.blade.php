@@ -14,6 +14,9 @@
 
 		@yield('content')
 	</div>
+
+	@include('layouts.partials.footer')
+
 	{{ HTML::script('js/jquery-1.11.0.min.js') }}
 	{{ HTML::script('js/bootstrap.min.js') }}
 	<script>

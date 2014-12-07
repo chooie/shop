@@ -30,9 +30,9 @@ class ProductsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$products = Product::all();
+		$products = Product::orderBy('created_at', 'asc')->paginate(24);
 
-        return View::make('products.listing', compact('products'));
+        return View::make('products.index', compact('products'));
 	}
 
     /**
@@ -42,7 +42,7 @@ class ProductsController extends \BaseController {
      */
     public function indexByCategory($category)
     {
-        $products = Product::whereCategory($category)->simplePaginate(25);
+        $products = Product::whereCategory($category)->paginate(24);
         dd($products);
         return View::make('products.listing', compact('products'));
     }

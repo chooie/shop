@@ -7,7 +7,7 @@
         @include('products.partials.productOnUserProfile')
     @endforeach
 
-    @foreach ($user->products()->chunk(4) as $productSet)
+    {{--@foreach ($user->products()->chunk(4) as $productSet)
         <div class="row users">
             @foreach ($productSet as $product)
                 <div class="col-md-3 user-block">
@@ -16,4 +16,5 @@
             @endforeach
         </div>
     @endforeach
+    --}}
 @stop

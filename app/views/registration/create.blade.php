@@ -2,11 +2,12 @@
 
 @section('content')
 <div class="row">
+
+
 	<div class="col-md-6">
-		<h1>Join the Revolution!</h1>
-
+		<h1>ANTEEK</h1>
 		@include('layouts.partials.errors')
-
+		
 		{{ Form::open(['route' => 'register_path']) }}
 			<div class="form-group">
 				{{ Form::label('username', 'Username:') }}
@@ -31,9 +32,17 @@
             @include('layouts.partials.recaptcha')
 
 			<div class="form-group">
-				{{ Form::submit('Sign Up', ['class' => 'btn btn-primary']) }}
+				{{ Form::submit('SIGN UP', ['class' => 'btn btn-primary']) }}
 			</div>
 		{{ Form::close() }}
 	</div>
+
+
+	 
 </div>
+
+<html>
+    <body id="bg_cover " background="http://i.huffpost.com/gen/1311792/thumbs/o-VINTAGE-FURNITURE-facebook.jpg" />
+</html>
+
 @stop

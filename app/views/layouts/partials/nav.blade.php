@@ -13,22 +13,11 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 			<ul class="nav navbar-nav">
-				<li>{{ link_to_route('users.index', 'Browse Users', null, null) }}</li>
-                @if ($categories)
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Product Categories<span class="caret"></span></a>
-                      <ul class="dropdown-menu" role="menu">
-                        @foreach($categories as $category)
-                            <li>{{ link_to_route('products_by_category_path', $category->category, $category->category) }}</li>
-                        @endforeach
-                      </ul>
-                    </li>
-                @endif
+				<li>{{-- link_to_route('users_path', 'Browse Users') --}}</li>
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
 			@if ($currentUser)
-			    <li>{{ link_to_route('products.create', 'Add Item') }}</li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<img class="nav-gravatar" src="{{ $currentUser->present()->gravatar() }}" 
@@ -37,7 +26,7 @@
 						{{ $currentUser->username }} <span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu" role="menu">
-						<li>{{ link_to_route('users.show', 'Your Profile', $currentUser->username) }}</li>
+						<li>{{ link_to_route('users.show', 'Your Profile', $currentUser->id) }}</li>
 						<li class="divider"></li>
 						<li>{{ link_to_route('logout_path', 'Logout') }}</li>
 					</ul>

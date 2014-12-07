@@ -1,6 +1,5 @@
 <div class="container">
 
-    <hr>
 
     <footer>
         <div class="row">

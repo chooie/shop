@@ -26,4 +26,8 @@
 			{{ Form::close() }}
 		</div>
 	</div>
+	<html>
+    <body id="bg_cover " background="http://www.faccents.com/img/antiques-1.jpg" />
+</html>
+
 @stop

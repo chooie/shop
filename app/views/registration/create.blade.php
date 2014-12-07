@@ -28,7 +28,7 @@
 				{{ Form::password('password_confirmation', ['class' => 'form-control']) }}
             </div>
 
-            {{--@include('layouts.partials.recaptcha')--}}
+            @include('layouts.partials.recaptcha')
 
 			<div class="form-group">
 				{{ Form::submit('Sign Up', ['class' => 'btn btn-primary']) }}

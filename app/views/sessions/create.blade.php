@@ -1,12 +1,11 @@
 @extends('layouts.default')
 
-@section('content')
-	<h1>Sign In</h1>
-	
+@section('content')>
 	<div class="row">
 		<div class="col-md-6">
 		    @include('layouts.partials.errors')
 			{{ Form::open(['route' => 'login_path']) }}
+				<h1>Sign In</h1>
 				<div class="form-group">
 					{{ Form::label('email', 'Email:') }}
 					{{ Form::text('email', null, ['class' => 'form-control', 'required' => 'required']) }}

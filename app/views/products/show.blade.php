@@ -16,5 +16,11 @@
                         {{ Form::submit('Cancel Listing', ['class' => 'btn btn-danger']) }}
                     </div>
         {{ Form::close() }}
+    @else
+        {{ Form::open(['route' => ['products_purchase', $product->id]]) }}
+                    <div class="form-group">
+                        {{ Form::submit('Purchase Product', ['class' => 'btn btn-success']) }}
+                    </div>
+        {{ Form::close() }}
     @endif
 @stop

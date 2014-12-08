@@ -35,6 +35,10 @@ Route::get('productsByCategory/{category}', [
     'as' => 'products_by_category_path',
     'uses' => 'ProductsController@indexByCategory'
 ]);
+Route::post('products/purchase/{id}', [
+    'as' => 'products_purchase',
+    'uses' => 'ProductsController@purchase'
+]);
 /**
  * Users (Restful routing)
  */

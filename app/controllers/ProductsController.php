@@ -2,9 +2,6 @@
 
 use Shop\Products\Product;
 use Shop\Forms\ProductForm;
-
-
-
 use Shop\Categories\Category;
 
 class ProductsController extends \BaseController {
@@ -146,4 +143,15 @@ class ProductsController extends \BaseController {
 
         return Redirect::home();
 	}
+
+    public function purchase($id)
+    {
+        $itemToPurchase = Product::whereId($id)->first()->name;
+
+        Product::destroy($id);
+
+        Flash::message('You just bought: ' . $itemToPurchase . '. Enjoy!');
+
+        return Redirect::home();
+    }
 }

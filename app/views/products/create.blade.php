@@ -20,6 +20,11 @@
 				                              'min' => '0']) }}
 			</div>
 
+            <div class="form-group">
+                {{ Form::label('fileName', 'Upload Product Image:') }}
+                {{ Form::file('fileName') }}
+            </div>
+
 			<div class="form-group">
 				{{ Form::submit('Post Product', ['class' => 'btn btn-primary']) }}
 			</div>

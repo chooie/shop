@@ -20,7 +20,7 @@ class ProductsTableSeeder extends Seeder {
                 'user_id' => $faker->randomElement($userIds),
                 'category_id' => $faker->randomElement($categories),
                 'created_at' => $faker->dateTime(),
-                'image_path' => "images/products/" . rand(1, 10) . ".jpeg"
+                'image_path' => "images/productsRand/" . rand(1, 10) . ".jpeg"
             ]);
         }
     }

@@ -13,6 +13,6 @@ class RegistrationForm extends FormValidator
         'username' => 'required|unique:users',
         'email'    => 'required|email|unique:users',
         'password' => 'required|confirmed',
-        'g-recaptcha-response' => 'required|captcha'
+        //'g-recaptcha-response' => 'required|captcha'
     ];
 }

@@ -77,6 +77,9 @@ class ProductsController extends \BaseController {
         $product->name = Input::get('name');
         $product->price = Input::get('price');
         $product->user_id = Auth::user()->id;
+
+        /* Image Upload */
+        dd(Input::fileName());
         $product->image_path = "images/products/" . rand(1, 10) . ".jpeg";
         $product->save();
 

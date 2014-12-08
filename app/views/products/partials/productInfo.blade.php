@@ -1,6 +1,6 @@
 {{-- TODO: Make this pretty --}}
 <div class="thumbnail">
-    <img src={{ $product->image_path }} alt="">
+    {{ HTML::image("$product->image_path",'Product Image', null) }}
     <div class="caption">
         <h4 class="pull-right">&#8364;{{ $product->price }}</h4>
         <h4>{{ link_to_route('products.show', $product->name, $product->id) }}</h4>

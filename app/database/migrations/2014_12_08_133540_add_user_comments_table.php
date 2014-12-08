@@ -12,7 +12,7 @@ class AddUserCommentsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('user_comments', function(Blueprint $table)
+		Schema::create('user_comments', function(Blueprint $table)
 		{
             $table->increments('id');
             $table->integer('product_id')->index();
@@ -30,10 +30,7 @@ class AddUserCommentsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('user_comments', function(Blueprint $table)
-		{
-			
-		});
+		Schema::drop('user_comments');
 	}
 
 }

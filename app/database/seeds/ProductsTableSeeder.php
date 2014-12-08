@@ -19,7 +19,8 @@ class ProductsTableSeeder extends Seeder {
                 'price' => $faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 1000),
                 'user_id' => $faker->randomElement($userIds),
                 'category_id' => $faker->randomElement($categories),
-                'created_at' => $faker->dateTime()
+                'created_at' => $faker->dateTime(),
+                'image_path' => "images/products/" . rand(1, 10) . ".jpeg"
             ]);
         }
     }

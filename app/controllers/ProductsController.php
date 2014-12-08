@@ -77,7 +77,7 @@ class ProductsController extends \BaseController {
         $product->name = Input::get('name');
         $product->price = Input::get('price');
         $product->user_id = Auth::user()->id;
-
+        $product->image_path = "images/products/" . rand(1, 10) . ".jpeg";
         $product->save();
 
         Flash::message("Yay! You've successfully posted a new product!");

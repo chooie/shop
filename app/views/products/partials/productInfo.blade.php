@@ -1,6 +1,6 @@
 {{-- TODO: Make this pretty --}}
 <div class="thumbnail">
-    <img src={{ "http://lorempixel.com/350/150/abstract/" . rand(0, 10) }} alt="">
+    <img src={{ $product->image_path }} alt="">
     <div class="caption">
         <h4 class="pull-right">&#8364;{{ $product->price }}</h4>
         <h4>{{ link_to_route('products.show', $product->name, $product->id) }}</h4>

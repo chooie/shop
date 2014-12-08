@@ -7,7 +7,7 @@ class Product extends \Eloquent {
 
     use PresentableTrait;
 
-    protected $fillable = ['name', 'price', 'user_id'];
+    protected $fillable = ['name', 'price', 'user_id', 'image_path'];
 
     protected $presenter = 'Shop\Products\ProductPresenter';
 

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	{{ HTML::style('css/boostrap.min.css') }}
+	{{ HTML::style('css/bootstrap.min.css') }}
 	{{ HTML::style('css/main.css') }}
 	{{ HTML::style('fonts/roboto.css') }}
 </head>

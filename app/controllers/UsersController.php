@@ -28,7 +28,9 @@ class UsersController extends \BaseController {
 	{
         $user = User::whereUsername($username)->first();
 
-        return View::make('users.show', compact('user'));
+        $userProducts = $user->products()->get();
+
+        return View::make('users.show', compact('user', 'userProducts'));
 	}
 
 	/**

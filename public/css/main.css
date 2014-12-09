@@ -156,10 +156,13 @@ body {
 
 .slide-image {
     width: 100%;
-    height: 315px;
     max-height: 315px;
+    overflow:hidden;
 }
-
+.carousel {
+    max-height: 315px;
+    overflow: hidden;
+}
 /* Shop stuff - thumbnail in particular */
 .carousel-holder {
     margin-bottom: 30px;

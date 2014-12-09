@@ -7,7 +7,7 @@
 
 		@include('layouts.partials.errors')
 
-		{{ Form::open(['route' => 'products.store']) }}
+		{{ Form::open(['route' => 'products.store', 'files' => true]) }}
 			<div class="form-group">
 				{{ Form::label('name', 'Product name:') }}
 				{{ Form::text('name', null, ['class' => 'form-control']) }}

@@ -70,17 +70,37 @@ class ProductsController extends \BaseController {
 	 */
 	public function store()
 	{
-        $this->productForm->validate(Input::all());
+        $input = Input::all();
+
+        $this->productForm->validate($input);
 
         $product = new Product();
 
-        $product->name = Input::get('name');
-        $product->price = Input::get('price');
+        $product->name = $input['name'];
+        $product->price = $input['price'];
         $product->user_id = Auth::user()->id;
 
-        /* Image Upload */
-        dd(Input::fileName());
-        $product->image_path = "images/products/" . rand(1, 10) . ".jpeg";
+        // Image Upload
+
+        if ($input['fileName'] == null)
+        { // No image passed
+            $product->image_path = "images/productsRand/" . rand(1, 10) . ".jpeg";
+            $product->save();
+            Flash::message("Yay! You've successfully posted a new product!");
+            return Redirect::home();
+        }
+        // Save first in order to get the id
+        $product->save();
+
+        // Path in public folder where image will be stored
+        $path = "images/products/" . $product->id . ".jpeg";
+
+        $product->image_path = $path;
+
+        $image = Image::make($input['fileName']->getRealPath());
+
+        $image->save($path);
+
         $product->save();
 
         Flash::message("Yay! You've successfully posted a new product!");

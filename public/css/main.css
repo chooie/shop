@@ -150,10 +150,6 @@ body {
     padding-top: 70px;
 }
 
-.container h1:first-of-type {
-    margin-top: 0;
-}
-
 .password_reset {
     float: right;
 }

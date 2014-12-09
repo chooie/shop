@@ -177,4 +177,9 @@ class ProductsController extends \BaseController {
 
         return Redirect::home();
     }
+
+    public function purchaseShow($id)
+    {
+        return Redirect::action('ProductsController@show', [$id]);
+    }
 }

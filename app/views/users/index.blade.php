@@ -1,5 +1,6 @@
 @extends('layouts.default')
 
+<div class="container" style="margin-top: 60px">
 @section('content')
     @foreach ($users->chunk(4) as $userSet)
         <div class="row users">
@@ -14,6 +15,6 @@
             @endforeach
         </div>
     @endforeach
-
+</div>
 {{ $users->links() }}
 @stop

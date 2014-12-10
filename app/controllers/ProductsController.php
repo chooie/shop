@@ -118,7 +118,9 @@ class ProductsController extends \BaseController {
 	{
 		$product = Product::whereId($id)->first();
 
-        return View::make('products.show', compact('product'));
+        $comments = $product->comments()->get();
+
+        return View::make('products.show', compact('product', 'comments'));
 	}
 
 	/**

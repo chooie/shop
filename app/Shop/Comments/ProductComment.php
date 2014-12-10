@@ -10,4 +10,9 @@ class ProductComment extends \Eloquent
     {
         return $this->belongsTo('Shop\Products\Product', 'product_id');
     }
+
+    public function commenter()
+    {
+        return $this->belongsTo('Shop\Users\User', 'commenter_id');
+    }
 }

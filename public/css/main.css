@@ -164,7 +164,7 @@ border-color: white;
 }
 
 .navbar-default .navbar-brand:hover{
-    color:  black;x
+    color:  black;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
@@ -235,7 +235,7 @@ border-color: white;
 }
 /* Shop stuff - thumbnail in particular */
 .carousel-holder {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .carousel-control,

@@ -1,3 +1,18 @@
+.carousel-caption5{
+    background-color: white;
+    margin-bottom: 20%;
+    border-radius: 15px;
+    border-color: #F7F7F7;
+    border-width: 20px;
+    border-style: solid;
+
+}
+
+.2caption{
+    background-color: white;
+    width: 40%;
+    margin-bottom: 5%;
+}
 .opinionated{
     margin-top: -10px;
 }

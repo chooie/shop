@@ -28,6 +28,13 @@
                 src="{{ Image::url("images/misc/table3.png", 3000, 510, ['crop']) }}"
                 alt="ANTEEK"
             />
+            <div class="2caption">
+                <div class="carousel-caption carousel-caption5">
+                   <a href="https://www.facebook.com/AnteekFurniture"> <img src="images/misc/facebook.png"></a>
+                    <a href="https://twitter.com/AnteekFurniture"><img src="images/misc/twitter.png"></a>
+                    <img src="images/misc/instagram2.png">
+                </div>
+            </div>
         </div>
 2
         <div class="item">

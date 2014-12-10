@@ -12,12 +12,12 @@
         <div class="item active">
             <img {{-- First carousel image --}}
                 class="slide-image"
-                src="{{ Image::url("images/misc/table1.png", 2000, 750, ['crop']) }}"
+                src="{{ Image::url("images/misc/table1.png", 3000, 750, ['crop']) }}"
                 alt="ANTEEK"
             />
             <div class="container">
                 <div class="carousel-caption">
-                    <h2>ANTEEK</h2>
+                    <h2 class= "logo">ANTEEK</h2>
                 </div>
             </div>
         </div>
@@ -25,15 +25,15 @@
         <div class="item">
             <img {{-- Second carousel image --}}
                 class="slide-image"
-                src="{{ Image::url("images/misc/dish.jpg", 2000, 650, ['crop']) }}"
+                src="{{ Image::url("images/misc/table3.png", 3000, 510, ['crop']) }}"
                 alt="ANTEEK"
             />
         </div>
-
+2
         <div class="item">
             <img {{-- Third carousel image --}}
                 class="slide-image"
-                src="{{ Image::url("images/misc/table2.jpg", 2000, 750, ['crop']) }}"
+                src="{{ Image::url("images/misc/table2.jpg", 3000, 600, ['crop']) }}"
                 alt="ANTEEK"
             />
         </div>
@@ -46,9 +46,19 @@
     </a>
 </div>
 
+<div class="part2">
+    <div class="statementHeader">Mission Statement</div>
+
+    <div class="missionStatement">
+        “Anteek offers you an elegant looking,user 
+        <br>friendly platform for buying and selling antique
+        <br> furniture, It’s a treasure trove for Collectors, dealers
+        <br> and antique enthusiasts.”</div>
+ </div>
+
 <div class ="listings">
     @if ($recentProducts->get()->first())
-        <h3>Recent Listings</h3>
+        <h3 class="listingsHeading">Recent Listings</h3>
         @foreach ($recentProducts->get()->chunk(4) as $productSet)
             <div class="row row-no-top-margin">
                 @foreach ($productSet as $product)

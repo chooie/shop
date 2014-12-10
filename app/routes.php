@@ -78,3 +78,16 @@ Route::get('logout', [
     'as'   => 'logout_path',
     'uses' => 'SessionsController@destroy'
 ]);
+
+/**
+ * Comments
+ */
+Route::post('comments/productComment', [
+    'as' => 'product_comment_path',
+    'uses' => 'CommentsController@productComment'
+]);
+
+Route::post('comments/userComment', [
+    'as' => 'user_comment_path',
+    'uses' => 'CommentsController@userComment'
+]);

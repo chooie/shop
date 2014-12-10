@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+<nav id="shopNav" class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -51,28 +51,5 @@
 			</ul>
 		</div>
 	</div>
-	<script>
-(function ($) {
-  $(document).ready(function(){
-    
-	// hide .navbar first
-	$(".navbar").hide();
-	
-	// fade in .navbar
-	$(function () {
-		$(window).scroll(function () {
-            // set distance user needs to scroll before we fadeIn navbar
-			if ($(this).scrollTop() > 1000) {
-				$('.navbar').fadeIn();
-			} else {
-				$('.navbar').fadeOut();
-			}
-		});
 
-	
-	});
-
-});
-  }(jQuery));
-</script>
 </nav>

@@ -30,7 +30,9 @@ class UsersController extends \BaseController {
 
         $userProducts = $user->products()->get();
 
-        return View::make('users.show', compact('user', 'userProducts'));
+        $comments = $user->comments()->get();
+
+        return View::make('users.show', compact('user', 'userProducts', 'comments'));
 	}
 
 	/**

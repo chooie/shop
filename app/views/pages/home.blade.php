@@ -32,8 +32,8 @@
 2
         <div class="item">
             <img {{-- Third carousel image --}}
-                class="slide-image"
-                src="{{ Image::url("images/misc/table2.jpg", 3000, 600, ['crop']) }}"
+                class="slide-image opintionated"
+                src="{{ Image::url("images/misc/table2.jpg", 3000, 800, ['crop']) }}"
                 alt="ANTEEK"
             />
         </div>

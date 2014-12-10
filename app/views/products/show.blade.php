@@ -6,7 +6,7 @@
  
 <div class="row">  
     <div class='productImage col-lg-6 row' >
-        {{ HTML::image(Image::url($product->image_path,350,250, ['crop']),'Product Image', null) }}
+        {{ HTML::image(Image::url($product->image_path,1050,350, ['']),'Product Image', null) }}
     </div>
 
     

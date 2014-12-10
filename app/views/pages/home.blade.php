@@ -25,7 +25,7 @@
         <div class="item">
             <img {{-- Second carousel image --}}
                 class="slide-image"
-                src="{{ Image::url("images/misc/dish.jpg", 2000, 650, ['crop']) }}"
+                src="{{ Image::url("images/misc/dish.jpg", 2000, 750, ['crop']) }}"
                 alt="ANTEEK"
             />
         </div>

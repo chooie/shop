@@ -10,7 +10,7 @@
         "laracasts/flash": "~1.0",
         "laracasts/presenter" : "0.1.*",
         "anhskohbo/no-captcha": "*",
-        "folklore/image": "0.1.*"
+		"intervention/image": "~2.0"
 	},
     "require-dev": {
         "way/generators": "~2.0",

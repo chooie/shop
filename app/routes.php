@@ -10,6 +10,16 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+Route::get('test', function() {
+
+    Image::make(public_path() . '/images/productsRand/1.jpeg')
+        ->resize(640, 320)
+        ->save(public_path() . '/images/productsRand/1-(1200x600-greyscale).jpeg');
+
+    dd('saved to ' . public_path() . '/images/productsRand/1-(1200x600-greyscale).jpeg');
+
+});
+
 
 /**
  * Pages

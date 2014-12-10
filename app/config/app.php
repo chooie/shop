@@ -126,7 +126,7 @@ return array(
         'Laracasts\Validation\ValidationServiceProvider',
         'Laracasts\Flash\FlashServiceProvider',
         'Anhskohbo\NoCaptcha\NoCaptchaServiceProvider',
-        'Folklore\Image\ImageServiceProvider',
+        'Intervention\Image\ImageServiceProvider'
 
 	),
 
@@ -195,7 +195,7 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
         'Flash'			  => 'Laracasts\Flash\Flash',
-        'Image' => 'Folklore\Image\Facades\Image',
+        'Image' => 'Intervention\Image\Facades\Image'
 	),
 
 );

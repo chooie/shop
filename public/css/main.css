@@ -203,11 +203,11 @@ border-color: white;
 
 body {
     font-family: 'EngraversGothicBT-Regular';
-font-size: 20px;
-line-height: 32px;
-color: black;
-border-color: white;
--webkit-font-smoothing: antialiased;
+    font-size: 20px;
+    line-height: 32px;
+    color: black;
+    border-color: white;
+    -webkit-font-smoothing: antialiased;
     padding-top: 70px;
 }
 

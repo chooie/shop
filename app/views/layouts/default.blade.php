@@ -28,6 +28,25 @@
     	        $(this).submit();
     	    }
     	});
+        (function ($) {
+          $(document).ready(function(){
+
+        	// hide .navbar first
+        	$('#shopNav').hide();
+
+        	// fade in .navbar
+        	$(function () {
+        		$(window).scroll(function () {
+                    // set distance user needs to scroll before we fadeIn navbar
+        			if ($(this).scrollTop() > 100) {
+        				$('#shopNav').fadeIn();
+        			} else {
+        				$('#shopNav').fadeOut();
+        			}
+        		});
+        	});
+          });
+        }(jQuery));
 	</script>
 </body>
 </html>

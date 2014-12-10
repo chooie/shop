@@ -39,6 +39,10 @@ Route::post('products/purchase/{id}', [
     'as' => 'products_purchase',
     'uses' => 'ProductsController@purchase'
 ]);
+Route::get('products/purchase/{id}', [
+    'as' => 'products_purchase',
+    'uses' => 'ProductsController@purchaseShow'
+]);
 /**
  * Users (Restful routing)
  */

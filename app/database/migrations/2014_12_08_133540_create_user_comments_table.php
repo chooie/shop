@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class AddUserCommentsTable extends Migration {
+class CreateUserCommentsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -15,8 +15,8 @@ class AddUserCommentsTable extends Migration {
 		Schema::create('user_comments', function(Blueprint $table)
 		{
             $table->increments('id');
-            $table->integer('product_id')->index();
             $table->integer('user_id')->index();
+            $table->integer('commenter_id')->index();
             $table->text('body');
             $table->timestamps();
 		});

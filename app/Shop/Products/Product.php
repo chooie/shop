@@ -17,4 +17,9 @@ class Product extends \Eloquent {
         return $this->belongsTo('Shop\Users\User');
     }
 
+    public function comments()
+    {
+        return $this->hasMany('Shop\Comments\ProductComment');
+    }
+
 }

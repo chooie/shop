@@ -6,15 +6,24 @@ class DatabaseSeeder extends Seeder {
      * @var array
      */
     protected $tables = [
-        'users', 'products', 'categories'
+        'users',
+        'products',
+        'categories',
+        'user_comments',
+        'product_comments'
     ];
 
     /**
      * @var array
      */
     protected $seeders = [
-        'UsersTableSeeder', 'CategoriesTableSeeder', 'ProductsTableSeeder'
+        'UsersTableSeeder',
+        'CategoriesTableSeeder',
+        'ProductsTableSeeder',
+        'UserCommentsTableSeeder',
+        'ProductCommentsTableSeeder'
     ];
+
     /**
      * Run the database seeds.
      *

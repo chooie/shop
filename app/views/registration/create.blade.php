@@ -4,8 +4,8 @@
 <div class="row">
 
 
-	<div class="col-md-6">
-		<h1>ANTEEK</h1>
+	<div class=" regForm col-md-6">
+		<h1 style="color:#990000;">ANTEEK</h1>
 		@include('layouts.partials.errors')
 		
 		{{ Form::open(['route' => 'register_path']) }}
@@ -31,8 +31,8 @@
 
             @include('layouts.partials.recaptcha')
 
-			<div class="form-group">
-				{{ Form::submit('SIGN UP', ['class' => 'btn btn-primary']) }}
+			<div class="form-group signUpButton">
+				{{ Form::submit('SIGN UP', ['class' => 'btn btn-success']) }}
 			</div>
 		{{ Form::close() }}
 	</div>

@@ -51,4 +51,28 @@
 			</ul>
 		</div>
 	</div>
+	<script>
+(function ($) {
+  $(document).ready(function(){
+    
+	// hide .navbar first
+	$(".nav navbar-nav").hide();
+	
+	// fade in .navbar
+	$(function () {
+		$(window).scroll(function () {
+            // set distance user needs to scroll before we fadeIn navbar
+			if ($(this).scrollTop() > 100) {
+				$('.nav navbar-nav').fadeIn();
+			} else {
+				$('.nav navbar-nav').fadeOut();
+			}
+		});
+
+	
+	});
+
+});
+  }(jQuery));
+</script>
 </nav>

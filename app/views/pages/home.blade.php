@@ -12,7 +12,7 @@
         <div class="item active">
             <img {{-- First carousel image --}}
                 class="slide-image"
-                src="{{ Image::url("images/misc/table1.png", 1200, 350, ['crop']) }}"
+                src="{{ Image::url("images/misc/table1.png", 2000, 750, ['crop']) }}"
                 alt="ANTEEK"
             />
             <div class="container">
@@ -25,7 +25,7 @@
         <div class="item">
             <img {{-- Second carousel image --}}
                 class="slide-image"
-                src="{{ Image::url("images/misc/dish.jpg", 1200, 350, ['crop']) }}"
+                src="{{ Image::url("images/misc/dish.jpg", 2000, 650, ['crop']) }}"
                 alt="ANTEEK"
             />
         </div>
@@ -33,7 +33,7 @@
         <div class="item">
             <img {{-- Third carousel image --}}
                 class="slide-image"
-                src="{{ Image::url("images/misc/table2.jpg", 1200, 350, ['crop']) }}"
+                src="{{ Image::url("images/misc/table2.jpg", 2000, 750, ['crop']) }}"
                 alt="ANTEEK"
             />
         </div>

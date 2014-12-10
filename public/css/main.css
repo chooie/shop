@@ -1,3 +1,51 @@
+a{
+    color:#990000;
+    text-decoration: none;
+}
+a:hover{
+    color:#990000;
+    text-decoration: underline;
+}
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus{
+    background-color: #990000;
+    border-color: white;
+}
+
+.pagination>li>a, .pagination>li>span {
+    color:#990000;
+}
+
+.signUpButton{
+    width: 7%;
+    height: 10%;
+}
+
+.regForm{
+    background-color: rgba(247, 247, 247, .7);
+    padding: 2%;
+    border-radius: 15px;
+}
+
+.productInfo{
+    
+    background-color: #F7F7F7;
+    padding: 2%;
+
+}
+
+.btn-success{
+    background-color: #990000;
+    border-color: #990000;
+}
+
+.btn-success:hover{
+    color: #990000;
+    background-color: white;
+    border-color: #990000;
+}
+li{
+    list-style-type: none;
+}
 .status-media {
     border: 1px solid #E3E3E3;
     border-bottom: none;
@@ -56,7 +104,7 @@
 
 .status-post .status-post-submit .btn {
     float: right;
-    background: #2eb1e4;
+    background: #990000;
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -104,22 +152,29 @@
 }
 
 .navbar-default {
-    background-color: #00BAE9;
-    border-color: #f3f3f3;
+background-color: #F7F7F7;
+border-color: white;
+
 }
 
 .navbar-default .navbar-brand {
-    color: #fff;
+    color:  #990000;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.navbar-default .navbar-brand:hover{
+    color:  black;x
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #fff;
+    color: black;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-    color: #2C6C91;
+    color: #990000;
 }
 
 .container h1:first-of-type {
@@ -147,6 +202,12 @@
 }
 
 body {
+    font-family: 'EngraversGothicBT-Regular';
+font-size: 20px;
+line-height: 32px;
+color: black;
+border-color: white;
+-webkit-font-smoothing: antialiased;
     padding-top: 70px;
 }
 
@@ -154,18 +215,27 @@ body {
     float: right;
 }
 
+.productImage{
+    
+    width:40%;
+    height: 65%;
+    
+}
 .slide-image {
     width: 100%;
-    max-height: 315px;
+    max-height: 100%;
+    max-width: 100%
     overflow:hidden;
 }
 .carousel {
-    max-height: 315px;
+    max-height: 100%;
+    max-width: 100%;
     overflow: hidden;
+    background-color: black;
 }
 /* Shop stuff - thumbnail in particular */
 .carousel-holder {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 .carousel-control,
@@ -198,7 +268,7 @@ body {
 .ratings {
     padding-right: 10px;
     padding-left: 10px;
-    color: #d17581;
+    color: #B8860B  ;
 }
 
 .thumbnail {

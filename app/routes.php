@@ -22,10 +22,6 @@ Route::get('about', [
     'as'    => 'about',  
     'uses'  => 'PagesController@about'
 ]);
-Route::get('placead', [
-    'as'    => 'placead',
-    'uses'  => 'PagesController@placead' 
-]);
 
 /**
  * Products (Restful routing)

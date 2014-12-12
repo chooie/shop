@@ -1,4 +1,4 @@
-.carousel-caption5{
+.carousel-caption5 {
     background-color: white;
     margin-bottom: 20%;
     border-radius: 15px;
@@ -8,7 +8,7 @@
 
 }
 
-.2caption{
+.caption{
     background-color: white;
     width: 40%;
     margin-bottom: 5%;
@@ -81,7 +81,7 @@
 }
 
 .container{
-    margin:0; 
+    margin:0;
     width:100%;
     padding: 0;
 }
@@ -380,4 +380,8 @@ body {
 
 footer {
     margin: 50px 0;
+}
+
+.below-nav {
+    margin-top: 30px;
 }

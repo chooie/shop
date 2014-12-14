@@ -44,7 +44,9 @@ class UsersController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+        Flash::message("That feature hasn't been implemented!");
+
+        return Redirect::home();
 	}
 
 	/**
@@ -56,7 +58,9 @@ class UsersController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+        Flash::message("That feature hasn't been implemented!");
+
+        return Redirect::home();
 	}
 
 	/**
@@ -68,7 +72,9 @@ class UsersController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+        Flash::message("That feature hasn't been implemented!");
+
+        return Redirect::home();
 	}
 
 }

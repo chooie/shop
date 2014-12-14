@@ -132,7 +132,9 @@ class ProductsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+        Flash::message("That feature hasn't been implemented!");
+
+		return Redirect::home();
 	}
 
 	/**
@@ -144,7 +146,9 @@ class ProductsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+        Flash::message("That feature hasn't been implemented!");
+
+        return Redirect::home();
 	}
 
 	/**
